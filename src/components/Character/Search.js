@@ -1,5 +1,11 @@
-import { useEffect, useState } from "react";
-import CharacterCard from "../../components/Character/Card";
-import Search from '../../components/Character/Search';
-import { fetchChearacters } from '../../services/avatarApi'
+import { useState } from "react";
+
+
+export default function Search({ onSearch }) {
+    const [finder, setfinder] = useState('');
+  return (
+    <div>Search</div>
+  )
+}
+
 
