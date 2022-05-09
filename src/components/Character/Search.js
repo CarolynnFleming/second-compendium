@@ -9,10 +9,14 @@ export default function Search({ onSearch }) {
         onSearch(event.target.value);
     };
 
-    
+
   return (
-    <div>Search</div>
-  )
+    <input
+    placeholder="Find A Bender"
+    value={finder}
+    onChange={change}
+    />
+  );
 }
 
 
