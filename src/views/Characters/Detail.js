@@ -16,4 +16,19 @@ export default function Detail(){
         }
         getBender();
     }, [id]);
+
+    return (
+        <>
+        <p>
+            <Link to="/">Back to the Begining</Link>
+        </p>
+        {loading ? (
+            <p>Loading Bender...</p>
+        ) : (
+            <h1>
+                <CharacterCard name={`Bender: ${bender.name}`} />
+            </h1>
+        )}
+        </>
+    );
 }
