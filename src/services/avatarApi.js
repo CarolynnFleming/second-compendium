@@ -1,5 +1,5 @@
 export async function fetchCharacter(id) {
-    const res = await fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters`);
+    const res = await fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`);
 const { bender } = await res.json();
 const { _id, name, afilliation, allies, photoUrl} = bender;
       return{ 
