@@ -1,4 +1,4 @@
-export async function fetchCharacter(id) {
+export async function fetchBender(id) {
     const res = await fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`);
 const { bender } = await res.json();
 const { _id, name, afilliation, allies, photoUrl} = bender;
@@ -11,7 +11,7 @@ const { _id, name, afilliation, allies, photoUrl} = bender;
     };
 }
 
-export async function fetchCharacters() {
+export async function fetchBenders() {
     const res = await fetch('https://last-airbender-api.herokuapp.com/api/v1/characters');
     const { bender } = await res.json();
     return bender.map(({_id, name, afilliation, allies, photoUrl}) => ({
