@@ -20,14 +20,14 @@ export default function Detail(){
     return (
         <>
         <p>
-            <Link to="/">Back to the Begining</Link>
+            <Link to="/characters">Back to the Begining</Link>
         </p>
         {loading ? (
             <p>Loading Bender...</p>
         ) : (
-            <h1>
-                <CharacterCard name={`Bender: ${bender.name}`} />
-            </h1>
+            <div>
+                <CharacterCard name={bender.name} photoUrl={bender.photoUrl} affiliation={bender.affiliation}/>
+            </div>
         )}
         </>
     );

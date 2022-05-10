@@ -43,7 +43,7 @@ useEffect(() => {
                 return (
                     <li key={bender.id}>
                         <Link to={`/characters/${bender.id}`}>
-                            <CharacterCard name={bender.name} />
+                            <CharacterCard name={bender.name} photoUrl={bender.photoUrl}/>
                         </Link>
                     </li>
                 );

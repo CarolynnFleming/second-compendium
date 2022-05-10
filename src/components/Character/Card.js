@@ -1,10 +1,9 @@
-export default function CharacterCard({ name, allies, photoUrl, affiliation }) {
+export default function CharacterCard({name, photoUrl}) {
+    
     return(
         <div>
             <p>{name}</p>
             <img src={photoUrl}/>
-            <p>{allies}</p>
-            <p>{affiliation}</p>
         </div>
     )
 }
