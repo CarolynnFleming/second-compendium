@@ -1,4 +1,3 @@
-import { loadPartialConfig } from '@babel/core';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CharacterCard from '../../components/Character/Card';
@@ -11,6 +10,8 @@ export default function List() {
     const [progress, setProgress] = useState([]);
     const [amFinding, setAmFinding] = useState(false)
     const benderList = amFinding ? progress : benders;
+
+
 const find = (search) => {
     setAmFinding(!!search.length);
     const filteredBenders = benders.filter((bender) => 
@@ -30,6 +31,27 @@ useEffect(() => {
 
 
   return (
-    <div>List</div>
-  )
+    <>
+    <h3>Benders From the Avatar!</h3>
+    {loading ? (
+        <p>Loading Benders...</p>
+    ) : (
+        <>
+        <Search onSearch={find} />
+        <ul>
+            {benderList.map((bender) => {
+                return (
+                    <li key={bender.id}>
+                        <Link to={`/characters/${bender.id}`}>
+                            <CharacterCard name={bender.name} />
+                        </Link>
+                    </li>
+                );
+            })}
+        </ul>
+        </>
+    )}
+    {amFinding && !progress.length && <p>No Progress!</p>}
+    </>
+  );
 }
