@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 import CharacterCard from "../../components/Character/Card";
-import { fetchBender, fetchCharacter } from "../../services/avatarApi";
+import { fetchBender } from "../../services/avatarApi";
 
 export default function Detail(){
     const [bender, setBender] = useState({});
