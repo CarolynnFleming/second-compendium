@@ -18,6 +18,17 @@ const find = (search) => {
     );
     setProgress(filteredBenders);
 }
+
+useEffect(() => {
+    const getBenders = async () => {
+        const benderData = await fetchBenders();
+        setBenders(benderData);
+        setLoading(false);
+    };
+    getBenders();
+}, []);
+
+
   return (
     <div>List</div>
   )
