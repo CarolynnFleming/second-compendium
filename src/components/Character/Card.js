@@ -3,7 +3,7 @@ export default function CharacterCard({name, photoUrl}) {
     return(
         <div>
             <p>{name}</p>
-            <img src={photoUrl}/>
+            <img alt="bender" src={photoUrl}/>
         </div>
     )
 }
