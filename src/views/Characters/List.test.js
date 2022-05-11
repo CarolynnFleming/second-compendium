@@ -12,4 +12,8 @@ render(
 );
 
 screen.getByText('Loading Benders...')
+await screen.findByText('Aang')
+const search = screen.getByPlaceholderText('Find A Bender');
+
+userEvent.type(search, 'Aang');
 })
