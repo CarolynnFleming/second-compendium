@@ -20,6 +20,6 @@ export async function fetchBenders() {
         name: people.name,
         photoUrl: people.photoUrl,
         afilliation: people.afilliation,
-        allies: people.allies
+        allies: people.allies,
     }));
 }
